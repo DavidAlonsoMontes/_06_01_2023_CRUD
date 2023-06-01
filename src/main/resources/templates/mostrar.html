@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Menus</title>
+</head>
+<body>
+<h1>Listado de Menus</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Menu id</th>
+    <th>Nombre</th>
+    <th>Calorias</th>
+    <th>Precio</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="m: ${menus}" >
+    <td>[[${m.menuId}]]</td>
+    <td>[[${m.nombre}]]</td>
+    <td>[[${m.calorias}]]</td>
+    <td>[[${m.precio}]]</td>
+
+  </tr>
+  </tbody>
+</table>
+<a th:href="@{'/'}">Regresar a la pagina inicial</a>
+
+</body>
+</html>

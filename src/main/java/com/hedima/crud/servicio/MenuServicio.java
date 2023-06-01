@@ -30,14 +30,14 @@ public class MenuServicio implements IMenuServicio{
 
     @Override
     public Menu consultarUno(Integer menuId) {
-        Optional<Menu> oMenuBBDD = repo.findById(menuId);
-        Menu menuBBDD;
-        if(oMenuBBDD.isPresent()){
-            menuBBDD = oMenuBBDD.get();
-        }else{
-            menuBBDD = new Menu();
-        }
-        return menuBBDD;
+//        Optional<Menu> oMenuBBDD = repo.findById(menuId);
+//        Menu menuBBDD;
+//        if(oMenuBBDD.isPresent()){
+//            menuBBDD = oMenuBBDD.get();
+//        }else{
+//            menuBBDD = new Menu();
+//        }
+        return repo.findById(menuId).orElse(new Menu());
     }
 
     @Override
