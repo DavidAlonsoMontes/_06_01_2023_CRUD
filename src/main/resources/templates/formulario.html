@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alta de Menu</title>
+</head>
+<body>
+<h1>Alta de Menu</h1>
+<form th:action="@{/menus/alta}" method="post" th:object="${menu}">
+  <label for="nombre" >Nombre</label>
+  <input type="text" id="nombre" th:field="*{nombre}" required>
+  <label for="calorias" >Calorias</label>
+  <input type="text" id="calorias" th:field="*{calorias}" />
+  <label for="precio" >precio</label>
+  <input type="number" id="precio" th:field="*{precio}" required>
+  <input type="submit" value="Dar de alta menu">
+</form>
+</body>
+</html>

@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>Listado de Menus</h1>
+<p><button><a th:href="@{/menus/formulario}">Crear un nuevo formulario</a></button></p>
 <table>
   <thead>
   <tr>
@@ -13,6 +14,7 @@
     <th>Nombre</th>
     <th>Calorias</th>
     <th>Precio</th>
+    <th>Eliminar</th>
   </tr>
   </thead>
   <tbody>
@@ -21,6 +23,7 @@
     <td>[[${m.nombre}]]</td>
     <td>[[${m.calorias}]]</td>
     <td>[[${m.precio}]]</td>
+    <td><a th:href="@{'/menus/eliminar/'+ ${m.menuId}}">eliminar</a></td>
 
   </tr>
   </tbody>
